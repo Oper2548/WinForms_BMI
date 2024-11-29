@@ -64,6 +64,7 @@
             txtHeight.Name = "txtHeight";
             txtHeight.Size = new Size(125, 27);
             txtHeight.TabIndex = 3;
+            txtHeight.TextChanged += txtHeight_TextChanged;
             // 
             // txtWeight
             // 
@@ -78,7 +79,7 @@
             btnBMI.Name = "btnBMI";
             btnBMI.Size = new Size(143, 103);
             btnBMI.TabIndex = 5;
-            btnBMI.Text = "button1";
+            btnBMI.Text = "คำนวณกัน";
             btnBMI.UseVisualStyleBackColor = true;
             btnBMI.Click += btnBMI_Click;
             // 
@@ -96,27 +97,27 @@
             label2.AutoSize = true;
             label2.Location = new Point(81, 139);
             label2.Name = "label2";
-            label2.Size = new Size(50, 20);
+            label2.Size = new Size(77, 20);
             label2.TabIndex = 6;
-            label2.Text = "label2";
+            label2.Text = "อายุของคุณ";
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Location = new Point(81, 205);
             label3.Name = "label3";
-            label3.Size = new Size(50, 20);
+            label3.Size = new Size(76, 20);
             label3.TabIndex = 7;
-            label3.Text = "label3";
+            label3.Text = "ความสูงหล่ะ";
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Location = new Point(81, 274);
             label4.Name = "label4";
-            label4.Size = new Size(50, 20);
+            label4.Size = new Size(74, 20);
             label4.TabIndex = 8;
-            label4.Text = "label4";
+            label4.Text = "หนังเท่าไหร่";
             // 
             // label5
             // 
@@ -134,7 +135,8 @@
             lblResult.Name = "lblResult";
             lblResult.Size = new Size(687, 108);
             lblResult.TabIndex = 10;
-            lblResult.Text = "label6";
+            lblResult.Text = "นี้คือ BMI ของคุณ";
+            lblResult.Click += lblResult_Click;
             // 
             // btnClear
             // 
@@ -142,7 +144,7 @@
             btnClear.Name = "btnClear";
             btnClear.Size = new Size(143, 39);
             btnClear.TabIndex = 11;
-            btnClear.Text = "button1";
+            btnClear.Text = "รีๆๆ";
             btnClear.UseVisualStyleBackColor = true;
             btnClear.Click += btnClear_Click;
             // 

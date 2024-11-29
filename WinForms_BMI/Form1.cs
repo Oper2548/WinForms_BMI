@@ -47,7 +47,7 @@ namespace WinForms_BMI
             double bmi = BMI(height, weight);  //เรียกใช้method BMI
 
             //แปลผล นำค่า bmi มาเทียบกับค่ามาตฐาน
-            lblResult.Text = bmi.ToString();
+            lblResult.Text = "BMI ของคุณคือ "+bmi.ToString();
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -113,12 +113,23 @@ namespace WinForms_BMI
         {
             double x = 0;
             double h = 0;
-            if ((double.TryParse(txtW.Text, out x) == false || (double.TryParse(txtW.Text, out h) == false)))
+            if ((double.TryParse(txtW.Text, out x) == false 
+                || (double.TryParse(txtH.Text, out h) == false)))
             {
-                MessageBox.Show("กรอกข้อมูลไม่ถูกนะ", "นั้น!");
+                MessageBox.Show("กรอกข้อมูลไม่ถูกนะจ๊ะ", "นั้น!");
                 return false;
             }
             return true;
+        }
+
+        private void txtHeight_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblResult_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
